@@ -1,3 +1,10 @@
+# pip install torch torchvision torchaudio
+# pip install numpy
+# pip install psutil
+# pip3 install --user gputil
+
+# python3 cuda_test.py
+
 import torch
 
 def check_cuda_status():
