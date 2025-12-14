@@ -1,6 +1,9 @@
-# cuda_test2.py
-# Full NVIDIA Ampere GPU stress & validation test (2025)
-# Works on RTX 3090/4090, A100, RTX A6000, etc.
+# pip install torch torchvision torchaudio
+# pip install numpy
+# pip install psutil
+# pip3 install --user gputil
+
+# python3 cuda_test2.py
 
 import torch
 import time
