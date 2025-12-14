@@ -1,4 +1,4 @@
-// nvcc cuda_test.cu -o cuda_test
+// nvcc cuda_test.cu -o cuda_test -arch=sm_86
 
 // ./cuda_test
 
