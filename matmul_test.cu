@@ -171,11 +171,11 @@ int main() {
 
   // --------------------- Results ---------------------
   printf("Matrix size: %d x %d\n\n", N, N);
-  printf("Naive Kernel      : %.3f ms   →   %.2f GFLOPS\n", time_naive,
+  printf("Naive Kernel      : %.3f ms   →   %.2f TFLOPS\n", time_naive,
          gflops_naive);
-  printf("Tiled Kernel      : %.3f ms   →   %.2f GFLOPS\n", time_tiled,
+  printf("Tiled Kernel      : %.3f ms   →   %.2f TFLOPS\n", time_tiled,
          gflops_tiled);
-  printf("cuBLAS (SGEMM)    : %.3f ms   →   %.2f GFLOPS\n\n", time_cublas,
+  printf("cuBLAS (SGEMM)    : %.3f ms   →   %.2f TFLOPS\n\n", time_cublas,
          gflops_cublas);
 
   printf("Speedup (Tiled vs Naive)   : %.1fx\n", time_naive / time_tiled);

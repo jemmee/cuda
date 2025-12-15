@@ -75,8 +75,8 @@ try:
 
     torch.cuda.synchronize()
     elapsed = time.time() - start
-    gflops = (2 * tensor_size**3 * iterations) / (elapsed * 1e12)  # rough TFLOPS estimate
-    print(f"Compute test PASSED in {elapsed:.2f}s (~{gflops:.1f} TFLOPS FP16)")
+    tflops = (2 * tensor_size**3 * iterations) / (elapsed * 1e12)  # rough TFLOPS estimate
+    print(f"Compute test PASSED in {elapsed:.2f}s (~{tflops:.1f} TFLOPS FP16)")
 
 except Exception as e:
     print(f"Compute test FAILED: {e}")
