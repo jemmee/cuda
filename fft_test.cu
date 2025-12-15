@@ -9,10 +9,6 @@
 // nvcc fft_test.cu -o fft_test -l cufft
 // ./ fft_test
 
-// fft_test.cu
-// CUDA program comparing cuFFT (optimized) vs. a very basic naive radix-2 FFT
-// kernel
-
 #include <chrono>
 #include <cmath>
 #include <cuComplex.h>
