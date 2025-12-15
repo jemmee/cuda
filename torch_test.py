@@ -3,7 +3,7 @@
 # pip install psutil
 # pip3 install --user gputil
 
-# python3 cuda_test2.py
+# python3 torch_test.py
 
 import torch
 import time

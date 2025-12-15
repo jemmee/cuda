@@ -1,6 +1,6 @@
-// nvcc cuda_test2.cu -o cuda_test2 -lcublas -lnvidia-ml
+// nvcc cublas_test.cu -o cublas_test -l cublas -l nvidia-ml
 
-// ./cuda_test2
+// ./cublas_test
 
 #include <cublas_v2.h>
 #include <cuda_fp16.h>
