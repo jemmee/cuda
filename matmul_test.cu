@@ -154,6 +154,8 @@ int main() {
 
   // Warm-up
   cudaDeviceSynchronize();
+  cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, N, N, N, &alpha, d_A, N, d_B, N,
+              &beta, d_C, N);
 
   cudaEventRecord(start);
   cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, N, N, N, &alpha, d_A, N, d_B, N,
