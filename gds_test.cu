@@ -76,8 +76,7 @@ int main() {
   CHECK_CUFILE(cuFileHandleRegister(&cfr_handle, &cfr_desc));
 
   // 6. Perform the Direct DMA Transfer
-  std::cout << "Transferring 10GB directly from NVMe to A30 GPU..."
-            << std::endl;
+  std::cout << "Transferring 10GB directly from NVMe to GPU..." << std::endl;
 
   auto start = std::chrono::high_resolution_clock::now();
 

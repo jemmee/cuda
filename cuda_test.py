@@ -25,9 +25,8 @@ def check_cuda_status():
     device_name = torch.cuda.get_device_name(0)
     print(f"Device Name (Device 0): {device_name}")
 
-    # The A30x is Ampere-based, so this should show a high Compute Capability
     major, minor = torch.cuda.get_device_capability(0)
-    print(f"Compute Capability (A30x is Ampere): {major}.{minor}")
+    print(f"Compute Capability: {major}.{minor}")
 
     # Set the device to the GPU
     device = torch.device("cuda")
