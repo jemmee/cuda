@@ -3,8 +3,8 @@
 //
 // fallocate -l 10G /data/10gb.bin
 //
-// /usr/local/cuda-12/bin/nvcc gds_test.cu -o gds_test
-// -I/usr/local/cuda-12/include -L/usr/local/cuda-12/lib64 -lcufile -lcudart
+// nvcc gds_test.cu -o gds_test -I/usr/local/cuda-12/include
+// -L/usr/local/cuda-12/lib64 -lcufile -lcudart
 //
 // ./gds_test
 
