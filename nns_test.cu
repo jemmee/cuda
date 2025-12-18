@@ -29,7 +29,8 @@ int main() {
   const int N = 10000000; // 10,000,000 points
   const int D = 3;        // Dimensions
 
-  std::cout << "Allocating memory for " << N << " points (~160MB on GPU)..."
+  std::cout << "Allocating memory for " << N << " points (~"
+            << N * D * sizeof(float) / 1024 / 1024 << "MB on GPU)..."
             << std::endl;
 
   // 1. Host Memory (using unique_ptr or vector to handle large heap allocation
