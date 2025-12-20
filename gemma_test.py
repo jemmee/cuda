@@ -13,9 +13,17 @@
 # python3 gemma_test.py
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model_id = "google/gemma-3-12b-it"
+
+# Define the 4-bit configuration
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.bfloat16,
+    bnb_4bit_use_double_quant=True,
+)
 
 # 1. Load Tokenizer and Model
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -23,6 +31,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 # Load in 4-bit to save VRAM (requires 'pip install bitsandbytes')
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
+    quantization_config=bnb_config,
     device_map="auto",          # Automatically picks your NVIDIA GPU
     torch_dtype=torch.bfloat16 # Best precision for Gemma
 )
